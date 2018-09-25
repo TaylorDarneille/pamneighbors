@@ -25,8 +25,12 @@ class MenuListComposition extends React.Component {
     open: false,
   };
 
-  handleToggle = () => {
-    this.setState(state => ({ open: !state.open }));
+  // handleToggle = () => {
+  //   this.setState(state => ({ open: !state.open }));
+  // };
+
+  handleOpen = () => {
+    this.setState(state => ({ open: true }));
   };
 
   handleClose = event => {
@@ -50,7 +54,7 @@ class MenuListComposition extends React.Component {
             }}
             aria-owns={open ? 'menu-list-grow' : null}
             aria-haspopup="true"
-            onClick={this.handleToggle}
+            onMouseOver={this.handleOpen}
           >
             Toggle Menu Grow
           </Button>
