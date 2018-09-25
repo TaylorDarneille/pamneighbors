@@ -6,12 +6,26 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import AboutMenu from './AboutMenu';
 import ServicesMenu from './ServicesMenu';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
-const styles = {
+const styles = theme => ({
   root: {
     flexGrow: 1,
   },
-};
+  sectionDesktop: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: { 
+      display: 'flex', 
+      flexGrow: 1,
+    },
+  },
+  sectionMobile: {
+    display: 'flex',
+    [theme.breakpoints.up('md')]: { display: 'none', },
+  },
+});
 
 function SimpleAppBar(props) {
   const { classes } = props;
@@ -20,12 +34,29 @@ function SimpleAppBar(props) {
     <div className={classes.root}>
       <AppBar position="static" color="default">
         <Toolbar>
+
           <Typography variant="title" color="inherit">
             Photos
           </Typography>
-          <ServicesMenu />
-          <AboutMenu />
-        </Toolbar>
+
+          <div className={classes.sectionDesktop}>
+            <ServicesMenu />
+            <AboutMenu />
+            <Button color="inherit" href="#">Transformations</Button>
+            <Button color="inherit" href="#">Apprenticeship Program</Button>
+            <Button variant="contained" href="#" className={classes.button}>
+              Contact
+            </Button>
+          </div>
+
+          <div className={classes.sectionMobile}>
+{/*            <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">
+*/}         <IconButton aria-haspopup="true" color="inherit">
+              <MenuIcon />
+            </IconButton>
+          </div>
+
+        </Toolbar> 
       </AppBar>
     </div>
   );
