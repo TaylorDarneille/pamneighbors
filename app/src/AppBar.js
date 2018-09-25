@@ -4,7 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import MenuListComposition from './MenuListComposition';
+import AboutMenu from './AboutMenu';
+import ServicesMenu from './ServicesMenu';
 
 const styles = {
   root: {
@@ -22,7 +23,8 @@ function SimpleAppBar(props) {
           <Typography variant="title" color="inherit">
             Photos
           </Typography>
-          <MenuListComposition />
+          <ServicesMenu />
+          <AboutMenu />
         </Toolbar>
       </AppBar>
     </div>

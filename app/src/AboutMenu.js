@@ -13,21 +13,17 @@ const styles = theme => ({
   root: {
     display: 'flex',
     justifyContent: 'flex-end',
-    flexGrow: 1,
+    // flexGrow: 1,
   },
   paper: {
     marginRight: theme.spacing.unit * 2,
   },
 });
 
-class MenuListComposition extends React.Component {
+class AboutMenu extends React.Component {
   state = {
     open: false,
   };
-
-  // handleToggle = () => {
-  //   this.setState(state => ({ open: !state.open }));
-  // };
 
   handleOpen = () => {
     this.setState(state => ({ open: true }));
@@ -56,7 +52,7 @@ class MenuListComposition extends React.Component {
             aria-haspopup="true"
             onMouseOver={this.handleOpen}
           >
-            Toggle Menu Grow
+            About
           </Button>
           <Popper open={open} anchorEl={this.anchorEl} transition disablePortal>
             {({ TransitionProps, placement }) => (
@@ -68,9 +64,12 @@ class MenuListComposition extends React.Component {
                 <Paper>
                   <ClickAwayListener onClickAway={this.handleClose}>
                     <MenuList>
-                      <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-                      <MenuItem onClick={this.handleClose}>My account</MenuItem>
-                      <MenuItem onClick={this.handleClose}>Logout</MenuItem>
+                      <MenuItem onClick={this.handleClose}>About Trillium Ink</MenuItem>
+                      <MenuItem onClick={this.handleClose}>Our Team</MenuItem>
+                      <MenuItem onClick={this.handleClose}>Scalp Micropigmentation</MenuItem>
+                      <MenuItem onClick={this.handleClose}>Permanent Makeup</MenuItem>
+                      <MenuItem onClick={this.handleClose}>Pricing</MenuItem>
+                      <MenuItem onClick={this.handleClose}>FAQs</MenuItem>
                     </MenuList>
                   </ClickAwayListener>
                 </Paper>
@@ -83,8 +82,8 @@ class MenuListComposition extends React.Component {
   }
 }
 
-MenuListComposition.propTypes = {
+AboutMenu.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(MenuListComposition);
+export default withStyles(styles)(AboutMenu);
