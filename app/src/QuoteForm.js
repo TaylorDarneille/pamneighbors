@@ -9,14 +9,22 @@ import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
   container: {
     display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: '3rem'
   },
   formControl: {
     margin: theme.spacing.unit,
+    width: '75%'
   },
+  button: {
+    marginTop: theme.spacing.unit *2
+  }
 });
 
 class ComposedTextField extends React.Component {
@@ -39,7 +47,12 @@ class ComposedTextField extends React.Component {
 
     return (
       <div className={classes.container}>
-      
+        <Typography className={classes.text} component="h2" variant="display1" align="center" gutterBottom>
+          GET A FREE QUOTE
+        </Typography>
+        <Typography className={classes.text} component="h2" variant="headline" align="center" gutterBottom>
+          Contact us today!
+        </Typography>
         <FormControl className={classes.formControl} variant="filled">
           <InputLabel htmlFor="component-filled">Name</InputLabel>
           <FilledInput id="component-filled" value={this.state.name} onChange={this.handleChange} />
@@ -52,11 +65,9 @@ class ComposedTextField extends React.Component {
           <InputLabel htmlFor="component-filled">Email</InputLabel>
           <FilledInput id="component-filled" value={this.state.email} onChange={this.handleChange} />
         </FormControl>
-        <label htmlFor="contained-button-file">
-          <Button variant="contained" component="span" className={classes.button}>
-            Yes, I'd like to learn more!
-          </Button>
-        </label>
+        <Button variant="contained" href="#contained-buttons" className={classes.button}>
+          Yes, I'd like to learn more!
+        </Button>
       </div>
     );
   }
