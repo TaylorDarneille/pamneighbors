@@ -19,7 +19,7 @@ function FeaturedRow(props) {
     <div className={classes.root}>
       <Grid container spacing={24}>
         <Grid item xs={12} sm={12} md={4}>
-          <FeaturedCard photo="here is a photo"/>
+          <FeaturedCard photo="here is a photo" />
         </Grid>
         <Grid item xs={12} sm={12} md={4}>
           <FeaturedCard />
@@ -33,7 +33,7 @@ function FeaturedRow(props) {
 }
 
 FeaturedRow.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(FeaturedRow);
