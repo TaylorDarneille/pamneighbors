@@ -8,11 +8,11 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
+import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
   container: {
     display: 'flex',
-    flexWrap: 'wrap',
   },
   formControl: {
     margin: theme.spacing.unit,
@@ -22,6 +22,8 @@ const styles = theme => ({
 class ComposedTextField extends React.Component {
   state = {
     name: 'Composed TextField',
+    phone: '555-555-5555',
+    email: 'you@email.com',
   };
 
   componentDidMount() {
@@ -37,10 +39,24 @@ class ComposedTextField extends React.Component {
 
     return (
       <div className={classes.container}>
+      
         <FormControl className={classes.formControl} variant="filled">
           <InputLabel htmlFor="component-filled">Name</InputLabel>
           <FilledInput id="component-filled" value={this.state.name} onChange={this.handleChange} />
+        </FormControl>  
+        <FormControl className={classes.formControl} variant="filled">
+          <InputLabel htmlFor="component-filled">Phone</InputLabel>
+          <FilledInput id="component-filled" value={this.state.phone} onChange={this.handleChange} />
+        </FormControl> 
+        <FormControl className={classes.formControl} variant="filled">
+          <InputLabel htmlFor="component-filled">Email</InputLabel>
+          <FilledInput id="component-filled" value={this.state.email} onChange={this.handleChange} />
         </FormControl>
+        <label htmlFor="contained-button-file">
+          <Button variant="contained" component="span" className={classes.button}>
+            Yes, I'd like to learn more!
+          </Button>
+        </label>
       </div>
     );
   }

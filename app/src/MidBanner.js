@@ -12,7 +12,7 @@ const styles = theme => ({
     margin: theme.spacing.unit * 10,
   },
   paper: {
-    height: 300,
+    height: 400,
     background: '#e0e0e0'
   }
 });
