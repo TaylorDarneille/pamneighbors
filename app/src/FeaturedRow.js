@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import FeaturedCard from './FeaturedCard.js';
 
 const styles = theme => ({
   root: {
@@ -12,13 +13,13 @@ const styles = theme => ({
     // marginRight: theme.spacing.unit * 1,
     // marginTop: theme.spacing.unit * 10
   },
-  paper: {
-    padding: theme.spacing.unit * 2,
-    margin: theme.spacing.unit * 2,
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    height: '380px',
-  },
+  // paper: {
+  //   padding: theme.spacing.unit * 2,
+  //   margin: theme.spacing.unit * 2,
+  //   textAlign: 'center',
+  //   color: theme.palette.text.secondary,
+  //   height: '380px',
+  // },
 });
 
 function FeaturedRow(props) {
@@ -28,13 +29,13 @@ function FeaturedRow(props) {
     <div className={classes.root}>
       <Grid container spacing={24}>
         <Grid item xs={12} sm={12} md={4}>
-          <Paper className={classes.paper}>xs=12 sm=4</Paper>
+          <FeaturedCard />
         </Grid>
         <Grid item xs={12} sm={12} md={4}>
-          <Paper className={classes.paper}>xs=12 sm=4</Paper>
+          <FeaturedCard />
         </Grid>
         <Grid item xs={12} sm={12} md={4}>
-          <Paper className={classes.paper}>xs=12 sm=4</Paper>
+          <FeaturedCard />
         </Grid>
       </Grid>
     </div>
