@@ -25,7 +25,7 @@ function FeaturedCard(props) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image="https://placekitten.com/300/300"
           title="Contemplative Reptile"
         />
         <CardContent>
