@@ -27,7 +27,7 @@ const tutorialSteps = [
       'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
   },
   {
-    label: 'Las Vegas, United States',
+    label: 'Las Vegas, USA',
     imgPath:
       'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
   },
@@ -52,7 +52,7 @@ const tutorialSteps = [
       'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
   },
   {
-    label: 'Las Vegas, United States',
+    label: 'Las Vegas, USA',
     imgPath:
       'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
   },
@@ -77,7 +77,7 @@ const tutorialSteps = [
       'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
   },
   {
-    label: 'Las Vegas, United States',
+    label: 'Las Vegas, USA',
     imgPath:
       'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
   },
@@ -91,11 +91,20 @@ const tutorialSteps = [
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    background: '#333333',
+    background: '#e0e0e0'
   },
   grouping: {
   	display: 'flex',
   	justifyContent: 'space-around',
+    padding: '0 75px'
+  },
+  text: {
+    paddingTop: theme.spacing.unit * 8,
+    paddingBottom: theme.spacing.unit * 5
+  },
+  mobileStepper: {
+    background: '#e0e0e0',
+    padding: theme.spacing.unit * 4
   }
 });
 
@@ -128,26 +137,15 @@ class ServicesStepper extends React.Component {
 
     return (
       <div className={classes.root}>
-{/*        <Paper square elevation={0} className={classes.paper}>
-          <Typography>{tutorialSteps[activeStep].label}</Typography>
-        </Paper>*/}
+      <Typography className={classes.text} component="h1" variant="headline" align="center" gutterBottom>
+        Our Services
+      </Typography>
         <SwipeableViews
           axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
           index={activeStep}
           onChangeIndex={this.handleStepChange}
           enableMouseEvents
         >
-{/*          {tutorialSteps.map((step, index) => (
-            <div>
-	            <Paper square elevation={0} className={classes.paper}>
-	      			<Typography>{tutorialSteps[activeStep].label}</Typography>
-	    		</Paper>
-              {Math.abs(activeStep - index) <= 2 ? (
-                <img key={step.label} className={classes.img} src={step.imgPath} alt={step.label} />
-              ) : null}
-            </div>
-          ))}*/}
-
           {tutorialSteps.map((step, index) => (
             <div className={classes.grouping}>
             	<ServiceCard service={tutorialSteps[activeStep]}/>
@@ -164,7 +162,7 @@ class ServicesStepper extends React.Component {
           activeStep={activeStep}
           className={classes.mobileStepper}
           nextButton={
-            <Button size="small" onClick={this.handleNext} disabled={activeStep === maxSteps - 1}>
+            <Button size="small" onClick={this.handleNext} disabled={activeStep === maxSteps - 1} className={classes.btn}>
               Next
               {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
             </Button>

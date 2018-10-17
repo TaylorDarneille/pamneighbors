@@ -11,44 +11,37 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = {
   card: {
-    maxWidth: 214,
-    maxHeight: 214,
+    // maxWidth: 214,
+    // maxHeight: 214,
     display: 'inline-block',
   },
-  // media: {
-  //   // ⚠️ object-fit is not supported by IE11.
-  //   objectFit: 'cover',
-  // },
+  media: {
+    // ⚠️ object-fit is not supported by IE11.
+    objectFit: 'cover',
+    height: '160px',
+    width: '160px'
+  },
 };
 
 function ServiceCard(props) {
   const { classes } = props;
   return (
+    <div className={classes.root}>
     <Card className={classes.card}>
       <CardActionArea>
         <CardMedia
           component="img"
           alt="Contemplative Reptile"
           className={classes.media}
-          height="140"
           image={props.service.imgPath}
           title="Contemplative Reptile"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.service.label}
-          </Typography>
-        </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
     </Card>
+    <Typography gutterBottom variant="overline" align="center">
+      {props.service.label}
+    </Typography>
+    </div>
   );
 }
 

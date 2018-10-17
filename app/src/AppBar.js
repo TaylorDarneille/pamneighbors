@@ -9,10 +9,14 @@ import ServicesMenu from './ServicesMenu';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Logo from './assets/Logo.png';
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
+  },
+  img: {
+    height: '65px'
   },
   sectionDesktop: {
     display: 'none',
@@ -25,6 +29,8 @@ const styles = theme => ({
   sectionMobile: {
     display: 'flex',
     [theme.breakpoints.up('md')]: { display: 'none', },
+    // justifyContent: 'flex-end',
+    width: '100%',
   },
 });
 
@@ -35,11 +41,7 @@ function SimpleAppBar(props) {
     <div className={classes.root}>
       <AppBar position="static" color="default">
         <Toolbar>
-
-          <Typography variant="title" color="inherit">
-            Photos
-          </Typography>
-
+          <img className={classes.img} src={Logo}/>
           <div className={classes.sectionDesktop}>
             <ServicesMenu />
             <AboutMenu />
@@ -56,7 +58,6 @@ function SimpleAppBar(props) {
               <MenuIcon />
             </IconButton>
           </div>
-
         </Toolbar> 
       </AppBar>
     </div>

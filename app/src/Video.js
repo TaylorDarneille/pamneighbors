@@ -1,13 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import ReactPlayer from 'react-player';
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
     textAlign: 'center',
-    marginTop: theme.spacing.unit * 5,
+    background: 'black',
+    height: '40vh',
+    overflow: 'hidden'
   },
+  vid: {
+    width: '75%',
+    // height: 'inherit',
+    margin: '0 auto',
+  }
 });
 
 function Video(props) {
@@ -15,7 +23,7 @@ function Video(props) {
 
   return (
     <div className={classes.root}>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <ReactPlayer className={classes.vid} url='https://www.youtube.com/watch?v=jMFuWTRtEKo' playing />
     </div>
   );
 }
