@@ -18,12 +18,13 @@ const styles = theme => ({
 
 function FeaturedRow(props) {
   const { classes } = props;
-
+  const heading = props.header ?
+    (<Typography className={classes.text} component="h2" variant="display2" align="center" gutterBottom>
+        {props.header}
+      </Typography>) : ''
   return (
     <div className={classes.root} style={{background: props.backgroundColor}}>
-      <Typography className={classes.text} component="h2" variant="display2" align="center" gutterBottom>
-        {props.header}
-      </Typography>
+      {heading}
       <Grid container spacing={24}>
         <Grid item xs={12} sm={12} md={4}>
           <FeaturedCard photo="here is a photo" />
