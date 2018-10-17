@@ -10,6 +10,7 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import ServiceCard from './ServiceCard.js';
 
+
 const tutorialSteps = [
   {
     label: 'San Francisco',
@@ -137,7 +138,7 @@ class ServicesStepper extends React.Component {
 
     return (
       <div className={classes.root}>
-      <Typography className={classes.text} component="h1" variant="headline" align="center" gutterBottom>
+      <Typography className={classes.text} component="h2" variant="display2" align="center" gutterBottom>
         Our Services
       </Typography>
         <SwipeableViews
