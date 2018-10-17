@@ -10,30 +10,31 @@ const styles = theme => ({
     flexGrow: 1,
     margin: theme.spacing.unit * 10,
   },
+  paper: {
+    height: 300,
+    background: 'blue'
+  }
 });
 
-function FeaturedRow(props) {
+function MidBanner(props) {
   const { classes } = props;
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={24}>
-        <Grid item xs={12} sm={12} md={4}>
-          <FeaturedCard photo="here is a photo"/>
+      <Grid container spacing={40}>
+        <Grid item xs={12} sm={12} md={6}>
+          <Paper className={classes.paper}>Thing</Paper>
         </Grid>
-        <Grid item xs={12} sm={12} md={4}>
-          <FeaturedCard />
-        </Grid>
-        <Grid item xs={12} sm={12} md={4}>
-          <FeaturedCard />
+        <Grid item xs={12} sm={12} md={6}>
+          <Paper className={classes.paper}>Other Thing</Paper>
         </Grid>
       </Grid>
     </div>
   );
 }
 
-FeaturedRow.propTypes = {
+MidBanner.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(FeaturedRow);
+export default withStyles(styles)(MidBanner);

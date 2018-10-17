@@ -34,7 +34,7 @@ function FeaturedCard(props) {
           </Typography>
           <Typography component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            across all continents except Antarctica {props.photo}
           </Typography>
         </CardContent>
       </CardActionArea>

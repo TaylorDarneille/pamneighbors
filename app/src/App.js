@@ -4,6 +4,7 @@ import SimpleAppBar from './AppBar.js';
 import FeaturedRow from './FeaturedRow.js';
 import Video from './Video.js';
 import ServicesStepper from './ServicesStepper.js';
+import MidBanner from './MidBanner.js';
 
 // see docs: https://material-ui.com/style/css-baseline/
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -16,6 +17,8 @@ function App() {
       <Video />
       <FeaturedRow />
       <ServicesStepper />
+      <MidBanner />
+      <FeaturedRow />
     </React.Fragment>
   );
 }
