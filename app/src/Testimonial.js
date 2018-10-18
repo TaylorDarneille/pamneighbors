@@ -46,10 +46,16 @@ function Testimonial(props) {
           <p className={classes.p}><em>- Suzanne E.</em></p>
         </Grid>
         <Grid item xs={12} sm={6} className={classes.imgFrame}>
-          <img className={classes.img} src="http://www.placekitten.com/250/250" />  
+          <img className={classes.img} src="http://www.placekitten.com/250/250" />
+          <Typography variant="caption" align="center" gutterBottom>
+            Before
+          </Typography> 
         </Grid>
         <Grid item xs={12} sm={6} className={classes.imgFrame}>
-          <img className={classes.img} src="http://www.placekitten.com/250/250" />  
+          <img className={classes.img} src="http://www.placekitten.com/250/250" /> 
+          <Typography variant="caption" align="center" gutterBottom>
+            After
+          </Typography>
         </Grid>
       </Grid>
     </div>

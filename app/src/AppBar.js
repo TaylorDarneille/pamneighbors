@@ -53,8 +53,7 @@ function SimpleAppBar(props) {
           </div>
 
           <div className={classes.sectionMobile}>
-{/*            <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">
-*/}         <IconButton aria-haspopup="true" color="inherit">
+            <IconButton aria-haspopup="true" color="inherit">
               <MenuIcon />
             </IconButton>
           </div>

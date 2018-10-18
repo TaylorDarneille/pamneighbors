@@ -15,8 +15,7 @@ const styles = theme => ({
     left: "50%",
     top: "50%",
     transform: "translateY(-50%) translateX(-50%)"
-  },
-
+  }
 });
 
 

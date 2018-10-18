@@ -23,13 +23,15 @@ const styles = theme => ({
     width: '75%'
   },
   button: {
-    marginTop: theme.spacing.unit *2
+    marginTop: theme.spacing.unit * 1,
+    marginBottom: theme.spacing.unit * 1,
+    width: "75%"
   }
 });
 
 class ComposedTextField extends React.Component {
   state = {
-    name: 'Composed TextField',
+    name: 'Jane Doe',
     phone: '555-555-5555',
     email: 'you@email.com',
   };
@@ -54,20 +56,23 @@ class ComposedTextField extends React.Component {
           Contact us today!
         </Typography>
         <FormControl className={classes.formControl} variant="filled">
-          <InputLabel htmlFor="component-filled">Name</InputLabel>
-          <FilledInput id="component-filled" value={this.state.name} onChange={this.handleChange} />
+          <InputLabel htmlFor="component-filled1">Name</InputLabel>
+          <FilledInput id="component-filled1" value={this.state.name} onChange={this.handleChange} />
         </FormControl>  
         <FormControl className={classes.formControl} variant="filled">
-          <InputLabel htmlFor="component-filled">Phone</InputLabel>
-          <FilledInput id="component-filled" value={this.state.phone} onChange={this.handleChange} />
+          <InputLabel htmlFor="component-filled2">Phone</InputLabel>
+          <FilledInput id="component-filled2" value={this.state.phone} onChange={this.handleChange} />
         </FormControl> 
         <FormControl className={classes.formControl} variant="filled">
-          <InputLabel htmlFor="component-filled">Email</InputLabel>
-          <FilledInput id="component-filled" value={this.state.email} onChange={this.handleChange} />
+          <InputLabel htmlFor="component-filled3">Email</InputLabel>
+          <FilledInput id="component-filled3" value={this.state.email} onChange={this.handleChange} />
         </FormControl>
         <Button variant="contained" href="#contained-buttons" className={classes.button}>
           Yes, I'd like to learn more!
         </Button>
+        <Typography className={classes.text} variant="caption" align="center" gutterBottom>
+          *A representative of Trillium Ink will contact you shortly.
+        </Typography>
       </div>
     );
   }

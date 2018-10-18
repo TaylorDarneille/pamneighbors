@@ -49,7 +49,8 @@ const styles = theme => ({
   },
   logo: {
     width: "100%",
-    height: "auto"
+    height: "auto",
+    marginLeft: "1rem"
   },
   footerLinksContainer: {
     marginTop: "1rem",
