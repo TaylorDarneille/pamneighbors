@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import FeaturedCard from './FeaturedCard.js';
 import QuoteForm from './QuoteForm.js';
+import Testimonial from './Testimonial.js';
 
 const styles = theme => ({
   root: {
@@ -12,7 +13,8 @@ const styles = theme => ({
     margin: theme.spacing.unit * 10,
   },
   paper: {
-    background: '#e0e0e0'
+    background: '#e0e0e0',
+    height: "100%"
   }
 });
 
@@ -23,7 +25,9 @@ function MidBanner(props) {
     <div className={classes.root}>
       <Grid container spacing={40}>
         <Grid item xs={12} sm={12} md={6}>
-          <Paper className={classes.paper}>Thing</Paper>
+          <Paper className={classes.paper}>
+            <Testimonial />
+          </Paper>
         </Grid>
         <Grid item xs={12} sm={12} md={6}>
           <Paper className={classes.paper}>

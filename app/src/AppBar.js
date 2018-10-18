@@ -29,7 +29,7 @@ const styles = theme => ({
   sectionMobile: {
     display: 'flex',
     [theme.breakpoints.up('md')]: { display: 'none', },
-    // justifyContent: 'flex-end',
+    justifyContent: 'flex-end',
     width: '100%',
   },
 });

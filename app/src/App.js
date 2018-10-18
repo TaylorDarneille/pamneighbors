@@ -5,6 +5,7 @@ import FeaturedRow from './FeaturedRow.js';
 import Video from './Video.js';
 import ServicesStepper from './ServicesStepper.js';
 import MidBanner from './MidBanner.js';
+import Footer from './Footer.js';
 
 
 // see docs: https://material-ui.com/style/css-baseline/
@@ -20,6 +21,7 @@ function App() {
       <ServicesStepper />
       <MidBanner />
       <FeaturedRow backgroundColor='#e0e0e0' header='Meet Our Certified Technicians'/>
+      <Footer />
     </React.Fragment>
   );
 }
