@@ -40,7 +40,6 @@ class AboutMenu extends React.Component {
 
   render() {
     const { classes } = this.props;
-
     return (
       <div className={classes.root}>
         <div>
