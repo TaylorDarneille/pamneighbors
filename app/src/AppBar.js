@@ -34,33 +34,57 @@ const styles = theme => ({
   },
 });
 
-function SimpleAppBar(props) {
-  const { classes } = props;
+class SimpleAppBar extends React.Component {
+  state = {
+    servicesOpen: false,
+    aboutOpen: false
+  };
 
-  return (
-    <div className={classes.root}>
-      <AppBar position="static" color="default">
-        <Toolbar>
-          <img className={classes.img} src={Logo}/>
-          <div className={classes.sectionDesktop}>
-            <ServicesMenu />
-            <AboutMenu />
-            <Button color="inherit" href="#">Transformations</Button>
-            <Button color="inherit" href="#">Apprenticeship Program</Button>
-            <Button variant="contained" href="#" className={classes.button}>
-              Contact
-            </Button>
-          </div>
+  toggleServices = () => {
+    this.setState({servicesOpen: !this.state.servicesOpen})
+  }
 
-          <div className={classes.sectionMobile}>
-            <IconButton aria-haspopup="true" color="inherit">
-              <MenuIcon />
-            </IconButton>
-          </div>
-        </Toolbar> 
-      </AppBar>
-    </div>
-  );
+  toggleAbout = () => {
+    this.setState({aboutOpen: !this.state.aboutOpen})
+  }
+
+  render () {
+
+    const { classes } = this.props;
+
+    return (
+      <div className={classes.root}>
+        <AppBar position="static" color="default">
+          <Toolbar>
+            <img className={classes.img} src={Logo}/>
+            <div className={classes.sectionDesktop}>
+              <ServicesMenu 
+                isOpen={this.state.servicesOpen} 
+                aboutIsOpen={this.state.aboutOpen} 
+                closeAbout={this.toggleAbout} 
+                toggleServices={this.toggleServices} />
+              <AboutMenu 
+                isOpen={this.state.aboutOpen} 
+                servicesIsOpen={this.state.servicesOpen} 
+                closeServices={this.toggleServices} 
+                toggleAbout={this.toggleAbout} />
+              <Button color="inherit" href="#">Transformations</Button>
+              <Button color="inherit" href="#">Apprenticeship Program</Button>
+              <Button variant="contained" href="#" className={classes.button}>
+                Contact
+              </Button>
+            </div>
+
+            <div className={classes.sectionMobile}>
+              <IconButton aria-haspopup="true" color="inherit">
+                <MenuIcon />
+              </IconButton>
+            </div>
+          </Toolbar> 
+        </AppBar>
+      </div>
+      );
+  }
 }
 
 SimpleAppBar.propTypes = {

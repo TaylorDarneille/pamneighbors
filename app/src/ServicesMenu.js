@@ -13,7 +13,7 @@ const styles = theme => ({
   root: {
     display: 'flex',
     justifyContent: 'flex-end',
-    // flexGrow: 1,
+    zIndex: '50'
   },
   paper: {
     marginRight: theme.spacing.unit * 2,
@@ -21,25 +21,26 @@ const styles = theme => ({
 });
 
 class ServicesMenu extends React.Component {
-  state = {
-    open: false,
-  };
+
 
   handleOpen = () => {
-    this.setState(state => ({ open: true }));
+    if(this.props.aboutIsOpen) {
+      this.props.closeAbout();
+    }
+    if(!this.props.isOpen) {
+      this.props.toggleServices();
+    }
   };
 
   handleClose = event => {
     if (this.anchorEl.contains(event.target)) {
       return;
     }
-
-    this.setState({ open: false });
+    this.props.toggleServices();
   };
 
   render() {
     const { classes } = this.props;
-    const { open } = this.state;
 
     return (
       <div className={classes.root}>
@@ -48,13 +49,13 @@ class ServicesMenu extends React.Component {
             buttonRef={node => {
               this.anchorEl = node;
             }}
-            aria-owns={open ? 'menu-list-grow' : null}
+            aria-owns={this.props.isOpen ? 'menu-list-grow' : null}
             aria-haspopup="true"
             onMouseOver={this.handleOpen}
           >
             Services
           </Button>
-          <Popper open={open} anchorEl={this.anchorEl} transition disablePortal>
+          <Popper open={this.props.isOpen} anchorEl={this.anchorEl} transition disablePortal>
             {({ TransitionProps, placement }) => (
               <Grow
                 {...TransitionProps}
