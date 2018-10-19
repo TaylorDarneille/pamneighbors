@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import SimpleAppBar from './AppBar.js';
+import SimpleAppBar from './Navigation/AppBar.js';
 import FeaturedRow from './FeaturedRow.js';
 import Video from './Video.js';
 import ServicesStepper from './ServicesStepper.js';
 import MidBanner from './MidBanner.js';
-import Footer from './Footer.js';
+import Footer from './Navigation/Footer.js';
+import HeroImage from './HeroImage.js';
 
 
 // see docs: https://material-ui.com/style/css-baseline/
@@ -16,7 +17,8 @@ function App() {
     <React.Fragment>
       <CssBaseline />
       <SimpleAppBar />
-      <Video />
+{/*      <Video />*/}
+      <HeroImage />
       <FeaturedRow />
       <ServicesStepper />
       <MidBanner />

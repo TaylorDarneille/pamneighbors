@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import FeaturedCard from './FeaturedCard.js';
 import Typography from '@material-ui/core/Typography';
-import Logo from './assets/Logo.png';
-import Facebook from './assets/facebook-logo.png';
-import Insta from './assets/instagram-logo.png';
-import Youtube from './assets/youtube-logo.png';
-import Twitter from './assets/twitter-logo.png';
+import Logo from '../assets/Logo.png';
+import Facebook from '../assets/facebook-logo.png';
+import Insta from '../assets/instagram-logo.png';
+import Youtube from '../assets/youtube-logo.png';
+import Twitter from '../assets/twitter-logo.png';
 
 const styles = theme => ({
   root: {
