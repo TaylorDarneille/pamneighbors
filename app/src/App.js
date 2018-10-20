@@ -6,8 +6,9 @@ import Video from './Video.js';
 import ServicesStepper from './ServicesStepper.js';
 import MidBanner from './MidBanner.js';
 import Footer from './Navigation/Footer.js';
-import HeroImage from './HeroImage.js';
-import ServiceSummary from './ServiceSummary.js';
+import HeroImage from './ServicePage/HeroImage.js';
+import ServiceSummary from './ServicePage/ServiceSummary.js';
+import Process from './ServicePage/Process.js';
 
 
 // see docs: https://material-ui.com/style/css-baseline/
@@ -21,6 +22,7 @@ function App() {
       {/*<Video />*/}
       <HeroImage />
       <ServiceSummary />
+      <Process />
 {/*      <FeaturedRow />
       <ServicesStepper />
       <MidBanner />

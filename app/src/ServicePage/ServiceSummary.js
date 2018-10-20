@@ -9,6 +9,10 @@ const styles = theme => ({
   root: {
     flexGrow: 1,
     margin: theme.spacing.unit * 10,
+  },
+  paper: {
+    overflow: 'hidden',
+    position: 'relative'
   }
 });
 
@@ -25,7 +29,7 @@ function ServiceSummary(props) {
         </Grid>
         <Grid item xs={12} sm={12} md={6}>
             <Typography component="h2" variant="display1" gutterBottom>
-              Display 1
+              Name of Service
             </Typography>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo incididunt ut labore et dolore magna aliqua. Diam in arcu cursus euism. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Scelerisque mu pellentesque pulvinar pellentesque habitant. Iaculis at erat pellentesque adipiscing commodo elit at. Platea dictumst quisque sagittis purus sit.</p>
 
