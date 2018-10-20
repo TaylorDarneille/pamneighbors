@@ -7,6 +7,7 @@ import ServicesStepper from './ServicesStepper.js';
 import MidBanner from './MidBanner.js';
 import Footer from './Navigation/Footer.js';
 import HeroImage from './HeroImage.js';
+import ServiceSummary from './ServiceSummary.js';
 
 
 // see docs: https://material-ui.com/style/css-baseline/
@@ -17,13 +18,14 @@ function App() {
     <React.Fragment>
       <CssBaseline />
       <SimpleAppBar />
-{/*      <Video />*/}
+      {/*<Video />*/}
       <HeroImage />
-      <FeaturedRow />
+      <ServiceSummary />
+{/*      <FeaturedRow />
       <ServicesStepper />
       <MidBanner />
       <FeaturedRow backgroundColor='#e0e0e0' header='Meet Our Certified Technicians'/>
-      <Footer />
+*/}      <Footer />
     </React.Fragment>
   );
 }

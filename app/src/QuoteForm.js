@@ -58,7 +58,7 @@ class ComposedTextField extends React.Component {
         <FormControl className={classes.formControl} variant="filled">
           <InputLabel htmlFor="component-filled1">Name</InputLabel>
           <FilledInput id="component-filled1" value={this.state.name} onChange={this.handleChange} />
-        </FormControl>  
+        </FormControl>
         <FormControl className={classes.formControl} variant="filled">
           <InputLabel htmlFor="component-filled2">Phone</InputLabel>
           <FilledInput id="component-filled2" value={this.state.phone} onChange={this.handleChange} />
